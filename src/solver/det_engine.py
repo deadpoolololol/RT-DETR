@@ -165,15 +165,15 @@ def evaluate(model: torch.nn.Module, criterion: torch.nn.Module, postprocessors,
     coco_evaluator = CocoEvaluator(base_ds, iou_types)
     # coco_evaluator.coco_eval[iou_types[0]].params.iouThrs = [0, 0.1, 0.5, 0.75]
 
-    # 自定义目标尺寸范围 (VisDrone 标准)
-    coco_evaluator.coco_eval['bbox'].params.areaRng = [
-        [0, 400],        # 小目标 (S)
-        [400, 1600],     # 中目标 (M)
-        [1600, 1e5]      # 大目标 (L)
-    ]
+    # # 自定义目标尺寸范围 (VisDrone 标准)
+    # coco_evaluator.coco_eval['bbox'].params.areaRng = [
+    #     [0, 400],        # 小目标 (S)
+    #     [400, 1600],     # 中目标 (M)
+    #     [1600, 1e5]      # 大目标 (L)
+    # ]
 
-    # 为了对应范围标签（areaRngLbl）也需要修改
-    coco_evaluator.coco_eval['bbox'].params.areaRngLbl = ['small', 'medium', 'large']
+    # # 为了对应范围标签（areaRngLbl）也需要修改
+    # coco_evaluator.coco_eval['bbox'].params.areaRngLbl = ['small', 'medium', 'large']
 
     panoptic_evaluator = None
     # if 'panoptic' in postprocessors.keys():

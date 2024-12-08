@@ -120,7 +120,7 @@ def txt_to_coco(categories, annotations_path, images_path, output_coco_path):
                 if int(parts[4]) == 0 or int(parts[5]) == 11:
                     continue
                 else: 
-                    category_id = int(parts[5])  # 对应 VisDrone 的 object_category 从0开始编号需要+1
+                    category_id = int(parts[5])-1  # 对应 VisDrone 的 object_category 从0开始编号需要-1
 
 
                 # 添加标注信息到 COCO 数据
@@ -143,7 +143,7 @@ def txt_to_coco(categories, annotations_path, images_path, output_coco_path):
     print(f"转换完成，保存到 {output_coco_path}")
 
 def generate_coco_json():
-    # 指定类别映射
+    # # 指定类别映射
     # visdrone_categories = {
     #     1: "none",
     #     2: "pedestrian",

@@ -85,8 +85,8 @@ class HungarianMatcher(nn.Module):
         # but approximate it in 1 - proba[target class].
         # The 1 is a constant that doesn't change the matching, it can be ommitted.
         if self.use_focal_loss:
-            print("tgt_ids shape:", tgt_ids.shape)
-            print("out_prob shape:", out_prob.shape)
+            # print("tgt_ids:", tgt_ids)
+            # print("num_classes:", out_prob.shape[-1])
 
             out_prob = out_prob[:, tgt_ids]
             neg_cost_class = (1 - self.alpha) * (out_prob**self.gamma) * (-(1 - out_prob + 1e-8).log())
