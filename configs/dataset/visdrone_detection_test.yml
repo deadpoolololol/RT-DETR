@@ -1,0 +1,36 @@
+task: detection
+
+num_classes: 10
+remap_mscoco_category: False
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\images
+    ann_file: E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\visdrone_annotations_train.json
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  batch_size: 2
+  num_workers: 1
+  drop_last: True 
+
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\images
+    ann_file: E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\visdrone_annotations_val.json
+    transforms:
+      type: Compose
+      ops: ~ 
+
+  shuffle: False
+  batch_size: 8
+  num_workers: 1
+  drop_last: False
+
+  class_names: ['none','pedestrian', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor','others']
