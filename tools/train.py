@@ -44,8 +44,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', '-c', default="configs/rtdetr/rtdetr_r50vd_6x_visdrone.yml",type=str, )
-    # parser.add_argument('--resume', '-r',default=r"E:\Python\Project\2024.11.6 RT-DETR\rtdetr_pytorch\output\rtdetr_r50vd_6x_visdrone\20241208_120000\checkpoint0017.pth", type=str, )
-    parser.add_argument('--resume', '-r',type=str, )
+    parser.add_argument('--resume', '-r',default=r"E:\Python\Project\2024.11.6 RT-DETR\rtdetr_pytorch\output\rtdetr_r50vd_6x_visdrone\20241208_151103\checkpoint0009.pth", type=str, )
+    # parser.add_argument('--resume', '-r',type=str, )
     parser.add_argument('--tuning', '-t', type=str, )
     parser.add_argument('--test-only', action='store_true', default=False,)
     parser.add_argument('--amp', action='store_true', default=False,)

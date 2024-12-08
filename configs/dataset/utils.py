@@ -173,29 +173,29 @@ def generate_coco_json():
         10: "motor",
     }
 
-    # 输入输出路径
-    annotations_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\annotations"
-    images_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\images"
-    output_coco_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\visdrone_annotations_train.json"
-    txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
-
-    # 输入输出路径
-    annotations_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\annotations"
-    images_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\images"
-    output_coco_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\visdrone_annotations_val.json"
-    txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
-
     # # 输入输出路径
-    # annotations_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\annotations"
-    # images_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\images"
-    # output_coco_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\visdrone_annotations_train.json"
+    # annotations_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\annotations"
+    # images_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\images"
+    # output_coco_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-train\visdrone_annotations_train.json"
     # txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
 
     # # 输入输出路径
-    # annotations_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\annotations"
-    # images_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\images"
-    # output_coco_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\visdrone_annotations_val.json"
+    # annotations_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\annotations"
+    # images_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\images"
+    # output_coco_path = r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\visdrone_annotations_val.json"
     # txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
+
+    # 输入输出路径
+    annotations_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\annotations"
+    images_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\images"
+    output_coco_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-train\visdrone_annotations_train.json"
+    txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
+
+    # 输入输出路径
+    annotations_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\annotations"
+    images_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\images"
+    output_coco_path = r"E:\Project\Dataset\VisDrone2019\VisDrone2019-DET-val\visdrone_annotations_val.json"
+    txt_to_coco(visdrone_categories, annotations_path, images_path, output_coco_path)
 
 def check_id():
     coco = COCO(annotation_file=r"E:\Project\Dataset\VisDrone2019\test\VisDrone2019-DET-val\visdrone_annotations_val.json")
